@@ -155,3 +155,28 @@ p {
 .Favorites button:hover {
   background-color: #3e8e41;
 }
+
+.abilities {
+  margin-top: 20px;
+}
+
+.abilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.abilities li {
+  margin-bottom: 10px;
+}
+
+.ability-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ability-description {
+  font-size: 14px;
+  color: #666;
+}
+

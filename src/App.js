@@ -42,24 +42,39 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pokemon</h1>
-      <input type="number" onChange={(e)=>{setNumber(e.target.value)}} />
-      <button>Voir</button>
-      <h2>{name}</h2>
-      <h3>Force : {weight}</h3>
-      <img src={data?data.sprites.other.dream_world.front_default : 
-        "<p>Loading</p>"}/>
-      <p>Mes abilitées :</p>
-      {data ? data.abilities.map((value, key)=>{
-        return(
-          <div key={key}>
-            {value.ability.name}
-          </div>
-        )
-      }) : ""}
-      <button onClick={addToFavorites}>Ajouter aux favoris</button>
-      <Main/>
-      <Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} />
+      <header>
+        <h1>Pokédex</h1>
+        <p>Explorez les Pokémon</p>
+      </header>
+      <main>
+        <section className="search-bar">
+          <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} />
+          <button className="search-btn">Voir</button>
+        </section>
+        {data && (
+          <section className="pokemon-info">
+            <h2>{name}</h2>
+            <h3>Force : {weight}</h3>
+            <img src={data.sprites.other.dream_world.front_default} alt={name} />
+            <div className="abilities">
+              <h4>Mes abilitées :</h4>
+              <ul>
+                {data.abilities.map((ability, index) => (
+                  <li key={index}>
+                    <span className="ability-name">{ability.ability.name}</span>
+                    <p className="ability-description">{ability.ability.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button className="favorite-btn" onClick={addToFavorites}>
+              Ajouter aux favoris
+            </button>
+          </section>
+        )}
+        <Main />
+        <Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} />
+      </main>
     </div>
   );
 }
