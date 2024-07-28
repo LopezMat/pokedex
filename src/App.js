@@ -1,9 +1,9 @@
-
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
 import './Components/style.css';
 import Main from './Components/Main';
+import Favorites from './Components/Favorites'; // Importation du composant Favorites
 
 function App() {
   
@@ -11,10 +11,10 @@ function App() {
   const [name, setName] = useState();
   const [weight, setWeight] = useState();
   const [number, setNumber] = useState(1);
+  const [favorites, setFavorites] = useState([]); // État pour stocker les favoris
 
-  
-
-  URL=`https://pokeapi.co/api/v2/pokemon/${number}`;
+  // URL de l'API Pokémon
+  const URL = `https://pokeapi.co/api/v2/pokemon/${number}`;
 
   useEffect(()=>{
     axios.get(URL).then((response)=> {
@@ -27,6 +27,18 @@ function App() {
       window.alert(err);
     }) 
   },[number])
+
+  // Fonction pour ajouter un Pokémon aux favoris
+  const addToFavorites = () => {
+    if (!favorites.includes(data)) {
+      setFavorites([...favorites, data]);
+    }
+  };
+
+  // Fonction pour supprimer un Pokémon des favoris
+  const removeFromFavorites = (pokemon) => {
+    setFavorites(favorites.filter((fav) => fav !== pokemon));
+  };
 
   return (
     <div className="App">
@@ -45,10 +57,11 @@ function App() {
           </div>
         )
       }) : ""}
+      <button onClick={addToFavorites}>Ajouter aux favoris</button>
       <Main/>
+      <Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} />
     </div>
   );
 }
-
 
 export default App;
