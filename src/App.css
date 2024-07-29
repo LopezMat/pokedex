@@ -1,33 +1,46 @@
+/* Styles pour l'application */
+
 .App {
+  /* Centre le texte */
   text-align: center;
 }
 
 .App-logo {
+  /* Définit la hauteur du logo */
   height: 40vmin;
+  /* Désactive les événements de pointeur */
   pointer-events: none;
 }
 
+/* Animation du logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
+    /* Anime le logo en rotation infinie */
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
+  /* Définit la couleur de fond et la hauteur minimale */
   background-color: #282c34;
   min-height: 100vh;
+  /* Centre le contenu */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Définit la taille de police */
   font-size: calc(10px + 2vmin);
+  /* Définit la couleur du texte */
   color: white;
 }
 
 .App-link {
+  /* Définit la couleur des liens */
   color: #61dafb;
 }
 
+/* Définit l'animation de rotation du logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,29 +49,36 @@
     transform: rotate(360deg);
   }
 }
-/* style.css */
+
+/* Styles pour le corps de la page */
 
 body {
+  /* Définit la police et la couleur de fond */
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
 }
 
 .App {
+  /* Définit la largeur maximale et les marges */
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
+  /* Définit la couleur de fond et la bordure */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
+  /* Ajoute une ombre */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
+  /* Centre le titre */
   text-align: center;
   margin-bottom: 20px;
 }
 
 input[type="number"] {
+  /* Définit la largeur et la hauteur des champs de saisie */
   width: 100%;
   height: 40px;
   font-size: 18px;
@@ -68,11 +88,13 @@ input[type="number"] {
 }
 
 button {
+  /* Définit la largeur et la hauteur des boutons */
   width: 100%;
   height: 40px;
   font-size: 18px;
   padding: 10px;
   margin-bottom: 20px;
+  /* Définit la couleur de fond et la couleur du texte */
   background-color: #4CAF50;
   color: #fff;
   border: none;
@@ -81,20 +103,24 @@ button {
 }
 
 button:hover {
+  /* Définit la couleur de fond au survol */
   background-color: #3e8e41;
 }
 
 h2 {
+  /* Définit la taille de police */
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 h3 {
+  /* Définit la taille de police */
   font-size: 18px;
   margin-bottom: 10px;
 }
 
 img {
+  /* Définit la largeur et la hauteur des images */
   width: auto;
   height: 200px;
   object-fit: cover;
@@ -103,48 +129,58 @@ img {
 }
 
 p {
+  /* Définit la marge inférieure */
   margin-bottom: 20px;
 }
 
 .abilities {
+  /* Définit la marge inférieure */
   margin-bottom: 20px;
 }
 
 .ability {
+  /* Définit la marge inférieure */
   margin-bottom: 10px;
 }
 
-/* Style pour le composant Favorites */
+/* Styles pour le composant Favorites */
 
 .Favorites {
+  /* Définit la marge supérieure */
   margin-top: 40px;
 }
 
 .Favorites h2 {
+  /* Définit la taille de police */
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .Favorites ul {
+  /* Définit la liste sans puces */
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .Favorites li {
+  /* Définit la marge inférieure */
   margin-bottom: 10px;
 }
 
 .Favorites li:hover {
+  /* Définit la couleur de fond au survol */
   background-color: #f5f5f5;
 }
 
 .Favorites button {
+  /* Définit la largeur et la hauteur des boutons */
   width: 100%;
   height: 40px;
   font-size: 18px;
   padding: 10px;
   margin-bottom: 20px;
+  /* Définit la couleur de fond et la couleur du texte */
   background-color: #4CAF50;
   color: #fff;
   border: none;
@@ -153,30 +189,35 @@ p {
 }
 
 .Favorites button:hover {
+  /* Définit la couleur de fond au survol */
   background-color: #3e8e41;
 }
 
 .abilities {
+  /* Définit la marge supérieure */
   margin-top: 20px;
 }
 
 .abilities ul {
+  /* Définit la liste sans puces */
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .abilities li {
+  /* Définit la marge inférieure */
   margin-bottom: 10px;
 }
 
 .ability-name {
+  /* Définit la taille de police et le poids */
   font-weight: bold;
   font-size: 16px;
 }
 
 .ability-description {
+  /* Définit la taille de police et la couleur */
   font-size: 14px;
   color: #666;
 }
-
